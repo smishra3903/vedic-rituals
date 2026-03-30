@@ -29,7 +29,7 @@
         <a href="#"><h1 class="text-2xl font-bold text-orange-600 tracking-tight">PoojaPath.se</h1></a>
         <div class="hidden md:flex items-center space-x-6 font-medium">
             <a href="#services" class="hover:text-orange-600 transition" data-i18n="services">Services</a>
-            <a href="#contact" class="hover:text-orange-600 transition" data-i18n="contact">Contact</a>
+            <a href="#contact" class="hover:text-orange-600 transition" data-i18n="contact">Contact: +46 722877775</a>
 
             <!-- Language Flags -->
             <div class="flex space-x-2">
@@ -38,7 +38,6 @@
                 <img src="https://flagcdn.com/16x12/se.png" alt="Swedish" class="cursor-pointer" data-lang="sv">
             </div>
         </div>
-        <!-- Mobile menu button -->
         <div class="md:hidden">
             <button id="mobile-menu-button" class="focus:outline-none">
                 <i class="fas fa-bars text-2xl text-orange-600"></i>
@@ -80,6 +79,7 @@
     </button>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Satyanarayan Card -->
         <div class="service-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
             <h3 class="text-xl font-bold mb-3 text-orange-700" data-i18n="satyanarayan">Satyanarayan Katha</h3>
             <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-4" data-i18n="satyanarayanDesc">
@@ -94,6 +94,7 @@
             </ul>
         </div>
 
+        <!-- Other services cards -->
         <div class="service-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
             <h3 class="text-xl font-bold mb-3 text-orange-700" data-i18n="grihapravesh">Grihapravesh</h3>
             <p class="text-gray-600 text-sm sm:text-base leading-relaxed" data-i18n="grihapraveshDesc">
@@ -118,17 +119,23 @@
         <div class="service-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
             <h3 class="text-xl font-bold mb-3 text-orange-700" data-i18n="diwali">Diwali & Navratri</h3>
             <p class="text-gray-600 text-sm sm:text-base leading-relaxed" data-i18n="diwaliDesc">
-                Lakshmi Puja for Diwali and Durga Path/Kanya Pujan during Navratri to celebrate the triumph of light and energy.
+                Lakshmi Puja for Diwali and Durga Puja/Kanya Pujan during Navratri to celebrate the triumph of light and energy.
             </p>
         </div>
 
+        <!-- Other Puja -->
         <div class="service-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
-            <h3 class="text-xl font-bold mb-3 text-orange-700" data-i18n="sanskars">Special Sanskars</h3>
-            <p class="text-gray-600 text-sm sm:text-base leading-relaxed" data-i18n="sanskarsDesc">
-                <b>Namkaran:</b> Naming ceremony for newborns. <br>
-                <b>Navgrah:</b> Peace rituals for planetary alignments.<br>
-                <b>Vastu Shanti:</b> Rituals to harmonize your home and invite positive energy <br>
-            </p>
+            <h3 class="text-xl font-bold mb-3 text-orange-700" data-i18n="sanskars">Other Puja</h3>
+            <div class="text-gray-600 text-sm sm:text-base leading-relaxed" data-i18n="sanskarsDesc">
+                <p><b>Akhand Ramayan Path:</b> Continuous recitation of Ramayan for blessings and peace.</p>
+                <p><b>Sundarkand Path:</b> Recitation of Sundarkand to remove obstacles and bring prosperity.</p>
+                <p><b>Ganesh Puja:</b> Worship of Lord Ganesha to remove hurdles and start new ventures.</p>
+                <p><b>Saraswati Puja:</b> Prayer for knowledge, wisdom, and academic success.</p>
+                <p><b>Hawan:</b> Fire ritual for purification, protection, and positive energy.</p>
+                <p><b>Namkaran:</b> Naming ceremony for newborns.</p>
+                <p><b>Navgrah:</b> Peace rituals for planetary alignments.</p>
+                <p><b>Vastu Shanti:</b> Rituals to harmonize your home and invite positive energy.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -138,13 +145,11 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
         <h2 class="text-3xl sm:text-4xl md:text-4xl font-bold mb-4" data-i18n="contactHeading">Book Your Puja</h2>
         <p class="mb-12 text-lg sm:text-xl opacity-90" data-i18n="contactSubheading">I am available to travel within Stockholm and nearby areas.</p>
-        
         <div class="bg-white text-gray-800 p-6 sm:p-5 rounded-3xl shadow-2xl">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
                 <div class="text-left">
                     <h4 class="text-xl font-bold text-orange-600 mb-4" data-i18n="contactDetails">Contact Details</h4>
                     <span class="text-2xl font-bold">+46 722877775 / +46 769750408</span>
-                    
                     <p class="mt-6 text-gray-500 italic text-sm" data-i18n="paymentInfo">Payment via Swish accepted.</p>
                 </div>
             </div>
@@ -159,18 +164,17 @@
 
 <!-- Scripts -->
 <script>
+// Scroll to top button
 const scrollBtn = document.getElementById('scrollToTopBtn');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 200) scrollBtn.classList.remove('hidden');
     else scrollBtn.classList.add('hidden');
 });
-scrollBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 // Translations
 const translations = {
-en: {
+en:{
 services:"Services", contact:"Contact +46 722877775",
 heroTitle:"Pooja Path in Stockholm",
 heroSubtitle:"Traditional Vedic Rituals & Poojas performed at your home in Sweden.",
@@ -178,7 +182,14 @@ ourServices:"Our Services", bookNow:"Book Now",
 servicesHeading:"Sacred Services", servicesSubheading:"Bringing divinity to your doorstep in Stockholm",
 satyanarayan:"Satyanarayan Katha",
 satyanarayanDesc:"Dedicated to Lord Vishnu, the Lord of Truth. Performed for gratitude, peace, and prosperity on Purnima or milestones.",
-satyanarayanList:"", grihapravesh:"Grihapravesh",
+satyanarayanList:`
+<li>• Includes Gauri-Ganesh Puja</li>
+<li>• Navgrah Puja</li>
+<li>• 5 Sacred Stories</li>
+<li>• Hawan</li>
+<li>• Aarti & Prasad</li>
+`,
+grihapravesh:"Grihapravesh",
 grihapraveshDesc:"Vastu Shanti and Shubh Muhurat puja for your new home in Sweden to invite positive energy and divine protection.",
 rudrabhishek:"Rudrabhishek",
 rudrabhishekDesc:"Powerful worship of Lord Shiva with offerings of milk and honey for health, success, and spiritual strength.",
@@ -186,8 +197,16 @@ vishwakarma:"Vishwakarma Pooja",
 vishwakarmaDesc:"Blessings for your workspace, vehicles, tools, and technology. Ideal for offices and technical professionals in Stockholm.",
 diwali:"Diwali & Navratri",
 diwaliDesc:"Lakshmi Puja for Diwali and Durga Path/Kanya Pujan during Navratri to celebrate the triumph of light and energy.",
-sanskars:"Special Sanskars",
-sanskarsDesc:"Namkaran: Naming ceremony for newborns. Navgrah: Peace rituals for planetary alignments.    Vastu Shanti: Rituals to harmonize your home and invite positive energy",
+sanskars:"Other Puja",
+sanskarsDesc:
+      "<p><b>Akhand Ramayan Path:</b> Continuous recitation of Ramayan for blessings and peace.</p>" +
+      "<p><b>Sundarkand Path:</b> Recitation of Sundarkand to remove obstacles and bring prosperity.</p>" +
+      "<p><b>Ganesh Puja:</b> Worship of Lord Ganesha to remove hurdles and start new ventures.</p>" +
+      "<p><b>Saraswati Puja:</b> Prayer for knowledge, wisdom, and academic success.</p>" +
+      "<p><b>Hawan:</b> Fire ritual for purification, protection, and positive energy.</p>" +
+      "<p><b>Namkaran:</b> Naming ceremony for newborns.</p>" +
+      "<p><b>Navgrah:</b> Peace rituals for planetary alignments.</p>" +
+      "<p><b>Vastu Shanti:</b> Rituals to harmonize your home and invite positive energy.</p>",
 contactHeading:"Book Your Puja",
 contactSubheading:"I am available to travel within Stockholm and nearby areas.",
 contactDetails:"Contact Details",
@@ -202,7 +221,13 @@ ourServices:"हमारी सेवाएं", bookNow:"बुक करे�
 servicesHeading:"पवित्र सेवाएं", servicesSubheading:"आपके दरवाजे तक दिव्यता लाना",
 satyanarayan:"सत्यनारायण कथा",
 satyanarayanDesc:"भगवान विष्णु को समर्पित। पूर्णिमा या विशेष अवसरों पर कृतज्ञता, शांति और समृद्धि के लिए।",
-satyanarayanList:"",
+satyanarayanList:`
+<li>• गौरी-गणेश पूजा शामिल है</li>
+<li>• नवग्रह पूजा</li>
+<li>• 5 पवित्र कथाएँ</li>
+<li>• हवन</li>
+<li>• आरती और प्रसाद</li>
+`,
 grihapravesh:"गृहप्रवेश",
 grihapraveshDesc:"आपके नए घर के लिए वास्तु शांति और शुभ मुहूर्त पूजा। सकारात्मक ऊर्जा और दिव्य संरक्षण के लिए।",
 rudrabhishek:"रुद्राभिषेक",
@@ -211,8 +236,16 @@ vishwakarma:"विश्वकर्मा पूजा",
 vishwakarmaDesc:"आपके कार्यस्थल, वाहन, उपकरण और तकनीक के लिए आशीर्वाद। कार्यालयों और तकनीकी पेशेवरों के लिए आदर्श।",
 diwali:"दिवाली और नवरात्रि",
 diwaliDesc:"दिवाली के लिए लक्ष्मी पूजा और नवरात्रि में दुर्गा पाठ/कन्या पूजन।",
-sanskars:"विशेष संस्कार",
-sanskarsDesc:"नामकरण: नवजात शिशु के लिए नामकरण समारोह। नवग्रह: ग्रह स्थिति के लिए शांति अनुष्ठान। वास्तु शांति: आपके घर को संतुलित करने के लिए अनुष्ठान।",
+sanskars:"अन्य पूजा",
+sanskarsDesc:
+      "<p><b>अखंड रामायण पाठ:</b> आशीर्वाद और शांति के लिए रामायण का सतत पाठ।</p>" +
+      "<p><b>सुंदरकांड पाठ:</b> बाधाओं को दूर करने और समृद्धि लाने के लिए सुंदरकांड का पाठ।</p>" +
+      "<p><b>गणेश पूजा:</b> बाधाओं को दूर करने और नए कार्य की शुरुआत के लिए भगवान गणेश की पूजा।</p>" +
+      "<p><b>सरस्वती पूजा:</b> ज्ञान, बुद्धि और शैक्षणिक सफलता के लिए प्रार्थना।</p>" +
+      "<p><b>हवन:</b> शुद्धिकरण, सुरक्षा और सकारात्मक ऊर्जा के लिए अग्नि अनुष्ठान।</p>" +
+      "<p><b>नामकरण:</b> नवजात शिशु के लिए नामकरण समारोह।</p>" +
+      "<p><b>नवग्रह:</b> ग्रह स्थिति के लिए शांति अनुष्ठान।</p>" +
+      "<p><b>वास्तु शांति:</b> आपके घर को संतुलित करने और सकारात्मक ऊर्जा लाने के लिए अनुष्ठान।</p>",
 contactHeading:"अपनी पूजा बुक करें",
 contactSubheading:"मैं स्टॉकहोम और आसपास के क्षेत्रों में यात्रा के लिए उपलब्ध हूं।",
 contactDetails:"संपर्क विवरण",
@@ -227,7 +260,13 @@ ourServices:"Våra tjänster", bookNow:"Boka nu",
 servicesHeading:"Heliga tjänster", servicesSubheading:"Förtroende till din dörr i Stockholm",
 satyanarayan:"Satyanarayan Katha",
 satyanarayanDesc:"Tillägnad Lord Vishnu, Sannings Herre. Utförs för tacksamhet, fred och välstånd vid Purnima eller milstolpar.",
-satyanarayanList:"",
+satyanarayanList:`
+<li>• Inkluderar Gauri-Ganesh Puja</li>
+<li>• Navgrah Puja</li>
+<li>• 5 heliga berättelser</li>
+<li>• Hawan</li>
+<li>• Aarti & Prasad</li>
+`,
 grihapravesh:"Grihapravesh",
 grihapraveshDesc:"Vastu Shanti och Shubh Muhurat puja för ditt nya hem i Sverige för att bjuda in positiv energi och gudomligt skydd.",
 rudrabhishek:"Rudrabhishek",
@@ -236,8 +275,17 @@ vishwakarma:"Vishwakarma Pooja",
 vishwakarmaDesc:"Välsignelser för din arbetsplats, fordon, verktyg och teknik. Idealisk för kontor och tekniska yrkesverksamma i Stockholm.",
 diwali:"Diwali & Navratri",
 diwaliDesc:"Lakshmi Puja för Diwali och Durga Path/Kanya Pujan under Navratri för att fira ljusets och energins triumf.",
-sanskars:"Special Sanskars",
-sanskarsDesc:"Namkaran: Namngivningsceremoni för nyfödda. Navgrah: Fredsritualer för planetära justeringar. Vastu Shanti: Ritualer för att harmonisera ditt hem och bjuda in positiv energi",
+sanskars:"Andra Pujas",
+sanskarsDesc:
+      "<p><b>Akhand Ramayan Path:</b> Kontinuerlig recitation av Ramayan för välsignelser och frid.</p>" +
+      "<p><b>Sundarkand Path:</b> Recitation av Sundarkand för att ta bort hinder och ge välstånd.</p>" +
+      "<p><b>Ganesh Puja:</b> Tillbedjan av Lord Ganesha för att ta bort hinder och starta nya projekt.</p>" +
+      "<p><b>Saraswati Puja:</b> Bön för kunskap, visdom och akademisk framgång.</p>" +
+      "<p><b>Hawan:</b> Eldritual för rening, skydd och positiv energi.</p>" +
+      "<p><b>Namkaran:</b> Namngivningsceremoni för nyfödda.</p>" +
+      "<p><b>Navgrah:</b> Fredsritualer för planetära justeringar.</p>" +
+      "<p><b>Vastu Shanti:</b> Ritualer för att harmonisera ditt hem och bjuda in positiv energi.</p>",
+contactHeading:"Boka din Puja",
 contactHeading:"Boka din Puja",
 contactSubheading:"Jag är tillgänglig för att resa inom Stockholm och närliggande områden.",
 contactDetails:"Kontaktuppgifter",
@@ -247,12 +295,16 @@ footer:"© 2026 PoojaPath.se | Traditionella ritualer i Sverige"
 };
 
 // Translate function
-function translatePage(lang) {
-document.querySelectorAll("[data-i18n]").forEach(el=>{
-const key = el.getAttribute("data-i18n");
-if(translations[lang][key]) el.textContent = translations[lang][key];
-});
-localStorage.setItem("selectedLang", lang);
+function translatePage(lang){
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const key = el.getAttribute("data-i18n");
+        if(key==="sanskarsDesc" || key==="satyanarayanList"){
+            el.innerHTML = translations[lang][key];
+        } else {
+            el.textContent = translations[lang][key];
+        }
+    });
+    localStorage.setItem("selectedLang", lang);
 }
 
 // Detect browser language
@@ -262,9 +314,9 @@ translatePage(lang);
 
 // Flag click events
 document.querySelectorAll("[data-lang]").forEach(flag=>{
-flag.addEventListener("click", ()=>{
-translatePage(flag.getAttribute("data-lang"));
-});
+    flag.addEventListener("click", ()=>{
+        translatePage(flag.getAttribute("data-lang"));
+    });
 });
 </script>
 
