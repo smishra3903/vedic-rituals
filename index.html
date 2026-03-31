@@ -32,10 +32,15 @@
             <a href="#contact" class="hover:text-orange-600 transition" data-i18n="contact">Contact: +46 722877775</a>
 
             <!-- Language Flags -->
-            <div class="flex space-x-2">
-                <img src="https://flagcdn.com/16x12/gb.png" alt="English" class="cursor-pointer" data-lang="en">
-                <img src="https://flagcdn.com/16x12/in.png" alt="Hindi" class="cursor-pointer" data-lang="hi">
-                <img src="https://flagcdn.com/16x12/se.png" alt="Swedish" class="cursor-pointer" data-lang="sv">
+            <div>
+                <select id="languageSwitcherDesktop"
+                    class="border border-gray-300 rounded-lg px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                    <option value="sv">Swedish</option>
+                    
+                </select>
             </div>
         </div>
         <div class="md:hidden">
@@ -44,12 +49,29 @@
             </button>
         </div>
     </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <div class="flex flex-col p-4 space-y-3">
+            <a href="#services" class="text-gray-700">Services</a>
+            <a href="#contact" class="text-gray-700">Contact</a>
+            <div>
+                <select id="languageSwitcherMobile"
+                    class="border border-gray-300 rounded-lg px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                    <option value="sv">Swedish</option>
+                    
+                </select>
+            </div>
+        </div>
+    </div>  
 </nav>
 
+
 <!-- Hero Section -->
-<header class="hero-bg h-[40vh] sm:h-[50vh] md:h-[60vh] flex items-center justify-center text-center text-white">
+<header class="hero-bg min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center justify-center text-center text-white px-4">
     <div class="px-4 sm:px-6 md:px-8 mt-0">
-        <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 italic" data-i18n="heroTitle">Vedic-Rituals in Stockholm</h2>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 italic leading-tight" data-i18n="heroTitle">Vedic-Rituals in Stockholm</h2>
         <p class="text-lg sm:text-xl md:text-2xl opacity-90 max-w-2xl mx-auto font-light" data-i18n="heroSubtitle">
             Traditional Vedic Rituals & Poojas performed at your home in Sweden.
         </p>
@@ -65,7 +87,7 @@
 </header>
 
 <!-- Services Section -->
-<section id="services" class="py-6 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+<section id="services" class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-2">
         <h2 class="text-3xl sm:text-4xl md:text-4xl font-bold text-gray-900" data-i18n="servicesHeading">Sacred Services</h2>
         <p class="text-gray-500 mt-1 text-lg sm:text-xl" data-i18n="servicesSubheading">Bringing divinity to your doorstep in Stockholm</p>
@@ -78,9 +100,9 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
         <!-- Satyanarayan Card -->
-        <div class="service-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
+        <div class="service-card bg-white p-5 sm:p-6 md:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
             <h3 class="text-xl font-bold mb-3 text-orange-700" data-i18n="satyanarayan">Satyanarayan Katha</h3>
             <p class="text-gray-600 text-sm sm:text-base leading-relaxed mb-4" data-i18n="satyanarayanDesc">
                 Dedicated to Lord Vishnu, the Lord of Truth. Performed for gratitude, peace, and prosperity on Purnima or milestones.
@@ -95,28 +117,28 @@
         </div>
 
         <!-- Other services cards -->
-        <div class="service-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
+        <div class="service-card bg-white p-5 sm:p-6 md:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
             <h3 class="text-xl font-bold mb-3 text-orange-700" data-i18n="grihapravesh">Grihapravesh</h3>
             <p class="text-gray-600 text-sm sm:text-base leading-relaxed" data-i18n="grihapraveshDesc">
                 Vastu Shanti and Shubh Muhurat Pooja for your new home in Sweden to invite positive energy and divine protection.
             </p>
         </div>
 
-        <div class="service-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
+        <div class="service-card bg-white p-5 sm:p-6 md:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
             <h3 class="text-xl font-bold mb-3 text-orange-700" data-i18n="rudrabhishek">Rudrabhishek</h3>
             <p class="text-gray-600 text-sm sm:text-base leading-relaxed" data-i18n="rudrabhishekDesc">
                 Powerful worship of Lord Shiva with offerings of milk and honey for health, success, and spiritual strength.
             </p>
         </div>
 
-        <div class="service-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
+        <div class="service-card bg-white p-5 sm:p-6 md:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
             <h3 class="text-xl font-bold mb-3 text-orange-700" data-i18n="vishwakarma">Vishwakarma Pooja</h3>
             <p class="text-gray-600 text-sm sm:text-base leading-relaxed" data-i18n="vishwakarmaDesc">
                 Blessings for your workspace, vehicles, tools, and technology. Ideal for offices and technical professionals in Stockholm.
             </p>
         </div>
 
-        <div class="service-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
+        <div class="service-card bg-white p-5 sm:p-6 md:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
             <h3 class="text-xl font-bold mb-3 text-orange-700" data-i18n="diwali">Diwali & Navratri</h3>
             <p class="text-gray-600 text-sm sm:text-base leading-relaxed" data-i18n="diwaliDesc">
                 Lakshmi Pooja for Diwali and Durga Pooja/Kanya Pujan during Navratri to celebrate the triumph of light and energy.
@@ -124,7 +146,7 @@
         </div>
 
         <!-- Other Pooja -->
-        <div class="service-card bg-white p-6 sm:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
+        <div class="service-card bg-white p-5 sm:p-6 md:p-8 rounded-2xl shadow-sm border-l-4 border-orange-500">
             <h3 class="text-xl font-bold mb-3 text-orange-700" data-i18n="sanskars">Other Pooja</h3>
             <div class="text-gray-600 text-sm sm:text-base leading-relaxed" data-i18n="sanskarsDesc">
                 <p><b>Akhand Ramayan Path:</b> Continuous recitation of Ramayan for blessings and peace.</p>
@@ -149,7 +171,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
                 <div class="text-left">
                     <h4 class="text-xl font-bold text-orange-600 mb-4" data-i18n="contactDetails">Contact Details</h4>
-                    <span class="text-2xl font-bold">+46 722877775 / +46 769750408</span>
+                    <p class="text-xl sm:text-2xl font-bold break-words">
+                        +46 722877775 <br> +46 769750408
+                        </p>
                     <p class="mt-6 text-gray-500 italic text-sm" data-i18n="paymentInfo">Payment via Swish accepted.</p>
                 </div>
             </div>
@@ -158,13 +182,15 @@
 </section>
 
 <!-- Footer -->
-<footer class="py-12 bg-gray-50 text-center text-gray-400 text-sm" data-i18n="footer">
+<footer class="py-8 sm:py-12 bg-gray-50 text-center text-gray-400 text-sm px-4" data-i18n="footer">
     © 2026 Vedic-Rituals | Traditional Rituals in Sweden
 </footer>
 
 <!-- Scripts -->
 <script>
-// Scroll to top button
+// ======================
+// Scroll to Top Button
+// ======================
 const scrollBtn = document.getElementById('scrollToTopBtn');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 200) scrollBtn.classList.remove('hidden');
@@ -172,128 +198,132 @@ window.addEventListener('scroll', () => {
 });
 scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
+// ======================
 // Translations
+// ======================
 const translations = {
-en:{
-services:"Services", contact:"Contact +46 722877775",
-heroTitle:"Vedic-Rituals in Stockholm",
-heroSubtitle:"Traditional Vedic Rituals & Poojas performed at your home in Sweden.",
-ourServices:"Our Services", bookNow:"Book Now",
-servicesHeading:"Sacred Services", servicesSubheading:"Bringing divinity to your doorstep in Stockholm",
-satyanarayan:"Satyanarayan Katha",
-satyanarayanDesc:"Dedicated to Lord Vishnu, the Lord of Truth. Performed for gratitude, peace, and prosperity on Purnima or milestones.",
-satyanarayanList:`
-<li>• Includes Gauri-Ganesh Pooja</li>
-<li>• Navgrah Pooja</li>
-<li>• 5 Sacred Stories</li>
-<li>• Hawan</li>
-<li>• Aarti & Prasad</li>
-`,
-grihapravesh:"Grihapravesh",
-grihapraveshDesc:"Vastu Shanti and Shubh Muhurat Pooja for your new home in Sweden to invite positive energy and divine protection.",
-rudrabhishek:"Rudrabhishek",
-rudrabhishekDesc:"Powerful worship of Lord Shiva with offerings of milk and honey for health, success, and spiritual strength.",
-vishwakarma:"Vishwakarma Pooja",
-vishwakarmaDesc:"Blessings for your workspace, vehicles, tools, and technology. Ideal for offices and technical professionals in Stockholm.",
-diwali:"Diwali & Navratri",
-diwaliDesc:"Lakshmi Pooja for Diwali and Durga Path/Kanya Pujan during Navratri to celebrate the triumph of light and energy.",
-sanskars:"Other Pooja",
-sanskarsDesc:
-      "<p><b>Akhand Ramayan Path:</b> Continuous recitation of Ramayan for blessings and peace.</p>" +
-      "<p><b>Sundarkand Path:</b> Recitation of Sundarkand to remove obstacles and bring prosperity.</p>" +
-      "<p><b>Ganesh Pooja:</b> Worship of Lord Ganesha to remove hurdles and start new ventures.</p>" +
-      "<p><b>Saraswati Pooja:</b> Prayer for knowledge, wisdom, and academic success.</p>" +
-      "<p><b>Hawan:</b> Fire ritual for purification, protection, and positive energy.</p>" +
-      "<p><b>Namkaran:</b> Naming ceremony for newborns.</p>" +
-      "<p><b>Navgrah:</b> Peace rituals for planetary alignments.</p>" +
-      "<p><b>Vastu Shanti:</b> Rituals to harmonize your home and invite positive energy.</p>",
-contactHeading:"Book Your Pooja",
-contactSubheading:"I am available to travel within Stockholm and nearby areas.",
-contactDetails:"Contact Details",
-paymentInfo:"Payment via Swish accepted.",
-footer:"© 2026 Vedic-Rituals | Traditional Rituals in Sweden"
-},
-hi:{
-services:"सेवाएं", contact:"संपर्क +46 722877775",
-heroTitle:"स्टॉकहोम में पूजा पाठ",
-heroSubtitle:"स्वीडन में आपके घर पर पारंपरिक वैदिक पूजा और अनुष्ठान।",
-ourServices:"हमारी सेवाएं", bookNow:"बुक करें",
-servicesHeading:"पवित्र सेवाएं", servicesSubheading:"आपके दरवाजे तक दिव्यता लाना",
-satyanarayan:"सत्यनारायण कथा",
-satyanarayanDesc:"भगवान विष्णु को समर्पित। पूर्णिमा या विशेष अवसरों पर कृतज्ञता, शांति और समृद्धि के लिए।",
-satyanarayanList:`
-<li>• गौरी-गणेश पूजा शामिल है</li>
-<li>• नवग्रह पूजा</li>
-<li>• 5 पवित्र कथाएँ</li>
-<li>• हवन</li>
-<li>• आरती और प्रसाद</li>
-`,
-grihapravesh:"गृहप्रवेश",
-grihapraveshDesc:"आपके नए घर के लिए वास्तु शांति और शुभ मुहूर्त पूजा। सकारात्मक ऊर्जा और दिव्य संरक्षण के लिए।",
-rudrabhishek:"रुद्राभिषेक",
-rudrabhishekDesc:"शिवजी की शक्ति पूजा, स्वास्थ्य, सफलता और आध्यात्मिक शक्ति के लिए दूध और शहद के साथ।",
-vishwakarma:"विश्वकर्मा पूजा",
-vishwakarmaDesc:"आपके कार्यस्थल, वाहन, उपकरण और तकनीक के लिए आशीर्वाद। कार्यालयों और तकनीकी पेशेवरों के लिए आदर्श।",
-diwali:"दिवाली और नवरात्रि",
-diwaliDesc:"दिवाली के लिए लक्ष्मी पूजा और नवरात्रि में दुर्गा पाठ/कन्या पूजन।",
-sanskars:"अन्य पूजा",
-sanskarsDesc:
-      "<p><b>अखंड रामायण पाठ:</b> आशीर्वाद और शांति के लिए रामायण का सतत पाठ।</p>" +
-      "<p><b>सुंदरकांड पाठ:</b> बाधाओं को दूर करने और समृद्धि लाने के लिए सुंदरकांड का पाठ।</p>" +
-      "<p><b>गणेश पूजा:</b> बाधाओं को दूर करने और नए कार्य की शुरुआत के लिए भगवान गणेश की पूजा।</p>" +
-      "<p><b>सरस्वती पूजा:</b> ज्ञान, बुद्धि और शैक्षणिक सफलता के लिए प्रार्थना।</p>" +
-      "<p><b>हवन:</b> शुद्धिकरण, सुरक्षा और सकारात्मक ऊर्जा के लिए अग्नि अनुष्ठान।</p>" +
-      "<p><b>नामकरण:</b> नवजात शिशु के लिए नामकरण समारोह।</p>" +
-      "<p><b>नवग्रह:</b> ग्रह स्थिति के लिए शांति अनुष्ठान।</p>" +
-      "<p><b>वास्तु शांति:</b> आपके घर को संतुलित करने और सकारात्मक ऊर्जा लाने के लिए अनुष्ठान।</p>",
-contactHeading:"अपनी पूजा बुक करें",
-contactSubheading:"मैं स्टॉकहोम और आसपास के क्षेत्रों में यात्रा के लिए उपलब्ध हूं।",
-contactDetails:"संपर्क विवरण",
-paymentInfo:"स्वीश के माध्यम से भुगतान स्वीकार किया जाता है।",
-footer:"© 2026 Vedic-Rituals | स्वीडन में पारंपरिक अनुष्ठान"
-},
-sv:{
-services:"Tjänster", contact:"Kontakt +46 722877775",
-heroTitle:"Vedic-Rituals i Stockholm",
-heroSubtitle:"Traditionella vediska ritualer och Pooja utförs i ditt hem i Sverige.",
-ourServices:"Våra tjänster", bookNow:"Boka nu",
-servicesHeading:"Heliga tjänster", servicesSubheading:"Förtroende till din dörr i Stockholm",
-satyanarayan:"Satyanarayan Katha",
-satyanarayanDesc:"Tillägnad Lord Vishnu, Sannings Herre. Utförs för tacksamhet, fred och välstånd vid Purnima eller milstolpar.",
-satyanarayanList:`
-<li>• Inkluderar Gauri-Ganesh Pooja</li>
-<li>• Navgrah Pooja</li>
-<li>• 5 heliga berättelser</li>
-<li>• Hawan</li>
-<li>• Aarti & Prasad</li>
-`,
-grihapravesh:"Grihapravesh",
-grihapraveshDesc:"Vastu Shanti och Shubh Muhurat Pooja för ditt nya hem i Sverige för att bjuda in positiv energi och gudomligt skydd.",
-rudrabhishek:"Rudrabhishek",
-rudrabhishekDesc:"Kraftfull dyrkan av Lord Shiva med erbjudanden av mjölk och honung för hälsa, framgång och andlig styrka.",
-vishwakarma:"Vishwakarma Pooja",
-vishwakarmaDesc:"Välsignelser för din arbetsplats, fordon, verktyg och teknik. Idealisk för kontor och tekniska yrkesverksamma i Stockholm.",
-diwali:"Diwali & Navratri",
-diwaliDesc:"Lakshmi Pooja för Diwali och Durga Path/Kanya Pujan under Navratri för att fira ljusets och energins triumf.",
-sanskars:"Andra Pooja",
-sanskarsDesc:
-      "<p><b>Akhand Ramayan Path:</b> Kontinuerlig recitation av Ramayan för välsignelser och frid.</p>" +
-      "<p><b>Sundarkand Path:</b> Recitation av Sundarkand för att ta bort hinder och ge välstånd.</p>" +
-      "<p><b>Ganesh Pooja:</b> Tillbedjan av Lord Ganesha för att ta bort hinder och starta nya projekt.</p>" +
-      "<p><b>Saraswati Pooja:</b> Bön för kunskap, visdom och akademisk framgång.</p>" +
-      "<p><b>Hawan:</b> Eldritual för rening, skydd och positiv energi.</p>" +
-      "<p><b>Namkaran:</b> Namngivningsceremoni för nyfödda.</p>" +
-      "<p><b>Navgrah:</b> Fredsritualer för planetära justeringar.</p>" +
-      "<p><b>Vastu Shanti:</b> Ritualer för att harmonisera ditt hem och bjuda in positiv energi.</p>",
-contactHeading:"Boka din Pooja",
-contactSubheading:"Jag är tillgänglig för att resa inom Stockholm och närliggande områden.",
-contactDetails:"Kontaktuppgifter",
-paymentInfo:"Betalning via Swish accepteras.",
-footer:"© 2026 Vedic-Rituals | Traditionella ritualer i Sverige"
-}
+    en: {
+        services:"Services", contact:"Contact +46 722877775",
+        heroTitle:"Vedic-Rituals in Stockholm",
+        heroSubtitle:"Traditional Vedic Rituals & Poojas performed at your home in Sweden.",
+        ourServices:"Our Services", bookNow:"Book Now",
+        servicesHeading:"Sacred Services", servicesSubheading:"Bringing divinity to your doorstep in Stockholm",
+        satyanarayan:"Satyanarayan Katha",
+        satyanarayanDesc:"Dedicated to Lord Vishnu, the Lord of Truth. Performed for gratitude, peace, and prosperity on Purnima or milestones.",
+        satyanarayanList:`
+        <li>• Includes Gauri-Ganesh Pooja</li>
+        <li>• Navgrah Pooja</li>
+        <li>• 5 Sacred Stories</li>
+        <li>• Hawan</li>
+        <li>• Aarti & Prasad</li>`,
+        grihapravesh:"Grihapravesh",
+        grihapraveshDesc:"Vastu Shanti and Shubh Muhurat Pooja for your new home in Sweden to invite positive energy and divine protection.",
+        rudrabhishek:"Rudrabhishek",
+        rudrabhishekDesc:"Powerful worship of Lord Shiva with offerings of milk and honey for health, success, and spiritual strength.",
+        vishwakarma:"Vishwakarma Pooja",
+        vishwakarmaDesc:"Blessings for your workspace, vehicles, tools, and technology. Ideal for offices and technical professionals in Stockholm.",
+        diwali:"Diwali & Navratri",
+        diwaliDesc:"Lakshmi Pooja for Diwali and Durga Path/Kanya Pujan during Navratri to celebrate the triumph of light and energy.",
+        sanskars:"Other Pooja",
+        sanskarsDesc:
+          "<p><b>Akhand Ramayan Path:</b> Continuous recitation of Ramayan for blessings and peace.</p>" +
+          "<p><b>Sundarkand Path:</b> Recitation of Sundarkand to remove obstacles and bring prosperity.</p>" +
+          "<p><b>Ganesh Pooja:</b> Worship of Lord Ganesha to remove hurdles and start new ventures.</p>" +
+          "<p><b>Saraswati Pooja:</b> Prayer for knowledge, wisdom, and academic success.</p>" +
+          "<p><b>Hawan:</b> Fire ritual for purification, protection, and positive energy.</p>" +
+          "<p><b>Namkaran:</b> Naming ceremony for newborns.</p>" +
+          "<p><b>Navgrah:</b> Peace rituals for planetary alignments.</p>" +
+          "<p><b>Vastu Shanti:</b> Rituals to harmonize your home and invite positive energy.</p>",
+        contactHeading:"Book Your Pooja",
+        contactSubheading:"I am available to travel within Stockholm and nearby areas.",
+        contactDetails:"Contact Details",
+        paymentInfo:"Payment via Swish or cash accepted.",
+        footer:"© 2026 Vedic-Rituals | Traditional Rituals in Sweden"
+    },
+    hi: {
+        services:"सेवाएं", contact:"संपर्क +46 722877775",
+        heroTitle:"स्टॉकहोम में पूजा पाठ",
+        heroSubtitle:"स्वीडन में आपके घर पर पारंपरिक वैदिक पूजा और अनुष्ठान।",
+        ourServices:"हमारी सेवाएं", bookNow:"बुक करें",
+        servicesHeading:"पवित्र सेवाएं", servicesSubheading:"आपके दरवाजे तक दिव्यता लाना",
+        satyanarayan:"सत्यनारायण कथा",
+        satyanarayanDesc:"भगवान विष्णु को समर्पित। पूर्णिमा या विशेष अवसरों पर कृतज्ञता, शांति और समृद्धि के लिए।",
+        satyanarayanList:`
+        <li>• गौरी-गणेश पूजा शामिल है</li>
+        <li>• नवग्रह पूजा</li>
+        <li>• 5 पवित्र कथाएँ</li>
+        <li>• हवन</li>
+        <li>• आरती और प्रसाद</li>`,
+        grihapravesh:"गृहप्रवेश",
+        grihapraveshDesc:"आपके नए घर के लिए वास्तु शांति और शुभ मुहूर्त पूजा। सकारात्मक ऊर्जा और दिव्य संरक्षण के लिए।",
+        rudrabhishek:"रुद्राभिषेक",
+        rudrabhishekDesc:"शिवजी की शक्ति पूजा, स्वास्थ्य, सफलता और आध्यात्मिक शक्ति के लिए दूध और शहद के साथ।",
+        vishwakarma:"विश्वकर्मा पूजा",
+        vishwakarmaDesc:"आपके कार्यस्थल, वाहन, उपकरण और तकनीक के लिए आशीर्वाद। कार्यालयों और तकनीकी पेशेवरों के लिए आदर्श।",
+        diwali:"दिवाली और नवरात्रि",
+        diwaliDesc:"दिवाली के लिए लक्ष्मी पूजा और नवरात्रि में दुर्गा पाठ/कन्या पूजन।",
+        sanskars:"अन्य पूजा",
+        sanskarsDesc:
+          "<p><b>अखंड रामायण पाठ:</b> आशीर्वाद और शांति के लिए रामायण का सतत पाठ।</p>" +
+          "<p><b>सुंदरकांड पाठ:</b> बाधाओं को दूर करने और समृद्धि लाने के लिए सुंदरकांड का पाठ।</p>" +
+          "<p><b>गणेश पूजा:</b> बाधाओं को दूर करने और नए कार्य की शुरुआत के लिए भगवान गणेश की पूजा।</p>" +
+          "<p><b>सरस्वती पूजा:</b> ज्ञान, बुद्धि और शैक्षणिक सफलता के लिए प्रार्थना।</p>" +
+          "<p><b>हवन:</b> शुद्धिकरण, सुरक्षा और सकारात्मक ऊर्जा के लिए अग्नि अनुष्ठान।</p>" +
+          "<p><b>नामकरण:</b> नवजात शिशु के लिए नामकरण समारोह।</p>" +
+          "<p><b>नवग्रह:</b> ग्रह स्थिति के लिए शांति अनुष्ठान।</p>" +
+          "<p><b>वास्तु शांति:</b> आपके घर को संतुलित करने और सकारात्मक ऊर्जा लाने के लिए अनुष्ठान।</p>",
+        contactHeading:"अपनी पूजा बुक करें",
+        contactSubheading:"मैं स्टॉकहोम और आसपास के क्षेत्रों में यात्रा के लिए उपलब्ध हूं।",
+        contactDetails:"संपर्क विवरण",
+        paymentInfo:"स्विश या नकद के माध्यम से भुगतान स्वीकार किया जाता है।",
+        footer:"© 2026 Vedic-Rituals | स्वीडन में पारंपरिक अनुष्ठान"
+    },
+    sv: {
+        services:"Tjänster", contact:"Kontakt +46 722877775",
+        heroTitle:"Vedic-Rituals i Stockholm",
+        heroSubtitle:"Traditionella vediska ritualer och Pooja utförs i ditt hem i Sverige.",
+        ourServices:"Våra tjänster", bookNow:"Boka nu",
+        servicesHeading:"Heliga tjänster", servicesSubheading:"Förtroende till din dörr i Stockholm",
+        satyanarayan:"Satyanarayan Katha",
+        satyanarayanDesc:"Tillägnad Lord Vishnu, Sannings Herre. Utförs för tacksamhet, fred och välstånd vid Purnima eller milstolpar.",
+        satyanarayanList:`
+        <li>• Inkluderar Gauri-Ganesh Pooja</li>
+        <li>• Navgrah Pooja</li>
+        <li>• 5 heliga berättelser</li>
+        <li>• Hawan</li>
+        <li>• Aarti & Prasad</li>`,
+        grihapravesh:"Grihapravesh",
+        grihapraveshDesc:"Vastu Shanti och Shubh Muhurat Pooja för ditt nya hem i Sverige för att bjuda in positiv energi och gudomligt skydd.",
+        rudrabhishek:"Rudrabhishek",
+        rudrabhishekDesc:"Kraftfull dyrkan av Lord Shiva med erbjudanden av mjölk och honung för hälsa, framgång och andlig styrka.",
+        vishwakarma:"Vishwakarma Pooja",
+        vishwakarmaDesc:"Välsignelser för din arbetsplats, fordon, verktyg och teknik. Idealisk för kontor och tekniska yrkesverksamma i Stockholm.",
+        diwali:"Diwali & Navratri",
+        diwaliDesc:"Lakshmi Pooja för Diwali och Durga Path/Kanya Pujan under Navratri för att fira ljusets och energins triumf.",
+        sanskars:"Andra Pooja",
+        sanskarsDesc:
+          "<p><b>Akhand Ramayan Path:</b> Kontinuerlig recitation av Ramayan för välsignelser och frid.</p>" +
+          "<p><b>Sundarkand Path:</b> Recitation av Sundarkand för att ta bort hinder och ge välstånd.</p>" +
+          "<p><b>Ganesh Pooja:</b> Tillbedjan av Lord Ganesha för att ta bort hinder och starta nya projekt.</p>" +
+          "<p><b>Saraswati Pooja:</b> Bön för kunskap, visdom och akademisk framgång.</p>" +
+          "<p><b>Hawan:</b> Eldritual för rening, skydd och positiv energi.</p>" +
+          "<p><b>Namkaran:</b> Namngivningsceremoni för nyfödda.</p>" +
+          "<p><b>Navgrah:</b> Fredsritualer för planetära justeringar.</p>" +
+          "<p><b>Vastu Shanti:</b> Ritualer för att harmonisera ditt hem och bjuda in positiv energi.</p>",
+        contactHeading:"Boka din Pooja",
+        contactSubheading:"Jag är tillgänglig för att resa inom Stockholm och närliggande områden.",
+        contactDetails:"Kontaktuppgifter",
+        paymentInfo:"Betalning via Swish eller kontant accepteras.",
+        footer:"© 2026 Vedic-Rituals | Traditionella ritualer i Sverige"
+    }
 };
 
-// Translate function
+// ======================
+// Language Selection
+// ======================
+const languageSwitcherDesktop = document.getElementById("languageSwitcherDesktop");
+const languageSwitcherMobile = document.getElementById("languageSwitcherMobile");
+
 function translatePage(lang){
     document.querySelectorAll("[data-i18n]").forEach(el=>{
         const key = el.getAttribute("data-i18n");
@@ -304,18 +334,40 @@ function translatePage(lang){
         }
     });
     localStorage.setItem("selectedLang", lang);
+
+    // Sync dropdowns
+    languageSwitcherDesktop.value = lang;
+    languageSwitcherMobile.value = lang;
 }
 
-// Detect browser language
-let lang = localStorage.getItem("selectedLang") || navigator.language.slice(0,2);
-if(!['en','hi','sv'].includes(lang)) lang='en';
+// Load language on page load
+let lang = localStorage.getItem("selectedLang") || 'en';
 translatePage(lang);
 
-// Flag click events
-document.querySelectorAll("[data-lang]").forEach(flag=>{
-    flag.addEventListener("click", ()=>{
-        translatePage(flag.getAttribute("data-lang"));
-    });
+// Event listeners
+languageSwitcherDesktop.addEventListener("change", function () {
+    translatePage(this.value);
+});
+languageSwitcherMobile.addEventListener("change", function () {
+    translatePage(this.value);
+});
+
+// ======================
+// Mobile Menu
+// ======================
+const menuBtn = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuBtn.addEventListener("click", (e) => {
+    mobileMenu.classList.toggle("hidden");
+    e.stopPropagation(); // Prevent click bubbling
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        mobileMenu.classList.add("hidden");
+    }
 });
 </script>
 
